@@ -31,9 +31,22 @@ console.log(result4);// => true
 let result5 = !!NaN;
 console.log(result5); // => false 
 
-/*!![] === true*/ 
+/*!![] == true*/ 
 let result6 = 2 +!![];
 console.log(result6);
 
 let b = !![] == true? true:false;
-console.log(b)
+console.log(b);
+
+/*(null - 0) -> Number(null)  = 0
+    0-0 = 0
+    0 + '0'
+    = '00'*/ 
+let result7 = (null - 0)+ '0';
+console.log(result7); 
+
+/*true + ("true" - 0) = ?
+the ans is NaN
+JS tried to convert 'true' to a number and failed */ 
+let result8 = true + ("true'" - 0);
+console.log(result8)
